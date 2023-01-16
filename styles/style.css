@@ -1,6 +1,10 @@
+/* common styles in css */
+
+
 * {
     padding: 0px;
     margin: 0px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .btn-primary button {
@@ -68,7 +72,15 @@ header {
 }
 
 
+
+
+
+
 /*    header(header-info) style css  */
+
+
+
+
 
 .header-info {
 
@@ -106,6 +118,49 @@ header {
 
 
 
+
+
+/*-------- header(tab-menu) style css in small screen  start here------------ */
+
+
+@media screen and (max-width:576px) {
+    .logo-name {
+        text-align: center;
+    }
+
+    .tab-menu {
+        flex-direction: column;
+
+    }
+
+    .menu-bar-items {
+
+        flex-direction: column;
+
+
+    }
+
+    .header-title {
+        padding: 0;
+        text-align: center;
+
+    }
+
+    .header-description {
+        padding: 0;
+        text-align: justify;
+    }
+
+    .header-banner {
+        width: 100%;
+    }
+
+}
+
+
+/*-------- header(tab-menu) style css in small screen   ends here------------ */
+
+
 /* main(Explore-features) style css */
 
 
@@ -125,6 +180,8 @@ header {
 .group-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    row-gap: 24px;
 }
 
 .quick-description {
@@ -162,6 +219,42 @@ header {
     margin-bottom: 32px;
 }
 
+/*--------  main(Explore-features) style css in small screen start here ------------ */
+
+
+@media screen and (max-width:576px) {
+
+    .container-explore {
+        flex-direction: column;
+    }
+
+    .group-images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .Explore-title {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+
+    .Explore-description {
+
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+
+    .quick-description {
+
+        width: 80%;
+
+    }
+}
+
+/*--------  main(Explore-features) style css in small screen ends here ------------ */
 
 
 /* main (feature-types) style layout*/
@@ -250,12 +343,48 @@ header {
 }
 
 
-.exprience-button button {
+.exprience-button>button {
     position: relative;
-
-    left: 725px;
+    left: 780px;
     bottom: 190px;
 }
+
+
+
+
+
+/*--------   main (feature-types) style css in small screen start here ------------ */
+
+
+@media screen and (max-width:576px) {
+
+    .feature-types-container {
+        flex-direction: column;
+    }
+
+    .feature-types-banner {
+
+        width: 100%;
+    }
+
+    .varity-features {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .exprience-button>button {
+
+        left: 0;
+        right: 0;
+
+    }
+}
+
+
+
+
+/*--------   main (feature-types) style css in small screen ends here ------------ */
 
 
 
@@ -307,7 +436,18 @@ header {
     text-align: center;
     width: 10%;
     padding: 25px;
+    background: red;
+    transition: transform 4s;
 }
+
+.achievement-done:hover {
+
+
+
+    transform: rotate(45deg);
+}
+
+
 
 ..achievement-done img {
 
@@ -330,6 +470,42 @@ header {
     color: #727272;
 
 }
+
+
+
+
+/*--------  main(achievement) style css in small screen start here ------------ */
+
+@media screen and (max-width:576px) {
+
+    .achievement-symbols {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .achievement-done {
+
+        width: 30%;
+
+    }
+
+    .achievement-intro {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+
+}
+
+
+
+
+
+
+
+/*--------   main(achievement) style css in small screen ends here ------------ */
 
 
 
@@ -387,4 +563,28 @@ header {
     text-align: center;
     background: #FFF4E7;
     border-radius: 8px;
+}
+
+/*--------  footer style css in small screen start here ------------ */
+
+@media screen and (max-width:576px) {
+
+    .Sponspor-description {
+        width: 80%;
+        text-align: center;
+    }
+
+    .Sponspor-company {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+/*--------  footer style css in small screen ends here ------------ */
+.hide {
+    display: none;
 }
